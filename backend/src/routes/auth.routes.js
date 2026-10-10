@@ -1,14 +1,13 @@
 const express = require('express')
 const authRouter = express.Router()
 const authController = require("../controllers/auth.controller.js")
-import { registerUserController } from '../controllers/auth.controller.js'
-const authMiddleWare = require("../middleWares/auth.middleWare.js")
+const authMiddleWare = require("../middlewares/auth.middleWare.js")
 
 /** 
  @route POST /api/auth/register
  @description register a new user
 */
-authRouter.post("/register", registerUserController)
+authRouter.post("/register", authController.registerUserController)
 /**
  * @route POST /api/auth/login
  * @description login user
