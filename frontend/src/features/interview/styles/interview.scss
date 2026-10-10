@@ -1,0 +1,103 @@
+/* Basic reset for the component */
+* {
+  box-sizing: border-box;
+}
+
+.interview-container {
+  display: flex;
+  height: 90vh; /* Adjust based on your overall app layout */
+  width: 100%;
+  max-width: 1200px; /* Optional: bounds the width on very large screens */
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #000;
+  font-family: sans-serif;
+  overflow: hidden;
+
+  /* Shared sidebar styles */
+  .sidebar {
+    width: 250px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Left Sidebar Styling */
+  .left-sidebar {
+    border-right: 1px solid #000;
+    justify-content: center; /* Centers the nav items vertically like the image */
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px; /* Spacing between links */
+
+      li {
+        font-size: 16px;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  /* Main Content Area Styling */
+  .main-content {
+    flex: 1; /* Takes up all remaining space between sidebars */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content-text {
+      font-size: 18px;
+    }
+
+    .zoom-icon {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      cursor: pointer;
+      color: #000;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  /* Right Sidebar Styling */
+  .right-sidebar {
+    border-left: 1px solid #000;
+    justify-content: flex-start;
+
+    .sidebar-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .tag {
+        border: 1px solid #000;
+        border-radius: 8px; /* Rounded pill shape */
+        padding: 6px 14px;
+        font-size: 14px;
+        background-color: #fff;
+      }
+    }
+  }
+}
