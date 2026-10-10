@@ -2,7 +2,7 @@ import React from 'react';
 import "../authform.scss";
 import { useNavigate, Link } from 'react-router';
 import { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/useAuth.jsx';
 
 const Register = ()=>{
     const[email,setEmail]=useState("")

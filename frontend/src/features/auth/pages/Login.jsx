@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../authform.scss";
 import { useNavigate, Link } from "react-router";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useAuth.jsx";
 
 const Login = () => {
     const { loading, handleLogin } = useAuth();
